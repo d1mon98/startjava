@@ -1,8 +1,8 @@
 public class Calculator {
-
-    static int a = 11;
-    static int b = 5;
-    static char sign = '%';
+    // TODO +, -, *, /, ^, %
+    static int a = 2;
+    static int b = 2;
+    static char sign = '^';
     static int result;
 
     public static void main(String[] args) {
@@ -16,13 +16,15 @@ public class Calculator {
         } else if (sign == '%') {
             result = a % b;
         } else if (sign == '^') {
-            int i = 1;
-            result = a;
+            int i = 0;
+            result = 1;
             while (i < b) {
                 result = result * a;
                 i++;
             }
-            System.out.println(a + " " + sign + " " + b + " = " + result);
         }
+        System.out.println(a + " " + sign + " " + b + " = " + result);
     }
 }
+
+
