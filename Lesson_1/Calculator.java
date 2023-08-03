@@ -1,30 +1,60 @@
 public class Calculator {
-    // TODO +, -, *, /, ^, %
-    static int a = 2;
-    static int b = 2;
-    static char sign = '^';
-    static int result;
 
-    public static void main(String[] args) {
+    private int firstNumber;
+    private int secondNumber;
+    private char mathOperation;
 
-        if (sign == '+') {
-            result = a + b;
-        } else if (sign == '*') {
-            result = a * b;
-        } else if (sign == '/') {
-            result = a / b;
-        } else if (sign == '%') {
-            result = a % b;
-        } else if (sign == '^') {
-            int i = 0;
-            result = 1;
-            while (i < b) {
-                result = result * a;
-                i++;
-            }
+    public void setFirstnumber(int firstNumber) {
+        this.firstNumber = firstNumber;
+    }
+
+    public void setSecondNumber(int secondNumber) {
+        this.secondNumber = secondNumber;
+    }
+
+    public void setMathOperation(char mathOperation) {
+        this.mathOperation = mathOperation;
+    }
+
+    //  +, -, *, /, ^, %
+    public void calculate() {
+        switch (mathOperation) {
+            case '+':
+                System.out.println(firstNumber + secondNumber);
+                break;
+            case '-':
+                System.out.println(firstNumber - secondNumber);
+                break;
+            case '*':
+                System.out.println(firstNumber * secondNumber);
+                break;
+            case '/':
+                System.out.println(firstNumber / secondNumber);
+                break;
+            case '%':
+                System.out.println(firstNumber % secondNumber);
+                break;
+            case '^':
+                pow();
+                break;
+            default:
+                System.out.println("Введеная математическая операция не поддерживается");
+                break;
         }
-        System.out.println(a + " " + sign + " " + b + " = " + result);
+    }
+    private void pow() {
+        int result = 1;
+        int i = 0;
+        while (i < secondNumber) {
+            result = result * firstNumber;
+            i++;
+        }
+        System.out.println(result);
     }
 }
+
+
+
+
 
 
