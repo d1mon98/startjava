@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.base;
+
 public class IfElseStatementTheme {
 
     public static int getHundr(int num){

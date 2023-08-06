@@ -1,8 +1,11 @@
+package com.startjava.lesson_1.final_;
+
 public class Calculator {
 
     private int firstNumber;
     private int secondNumber;
     private char mathOperation;
+
 
     public void setFirstnumber(int firstNumber) {
         this.firstNumber = firstNumber;
@@ -49,6 +52,7 @@ public class Calculator {
             result = result * firstNumber;
             i++;
         }
+
         System.out.println(result);
     }
 }

@@ -1,11 +1,13 @@
+package com.startjava.lesson_2_3.animal;
+
 public class Wolf {
-    // TODO: 02.08.2023 Создайте класс Wolf
+    // TODO: 02.08.2023 Создайте класс com.startjava.lesson_2_3.animal.Wolf
     //объявите в нем поля: пол, кличка, вес, возраст, окрас (не присваивайте им значения по умолчанию)
     //реализуйте методы: идти, сидеть, бежать, выть, охотиться
     //в каждом методе выводите сообщение вида: "Воет", "Сидит" и т. д.
-    //Создайте класс WolfTest с методом main
-    //в нем создайте объект типа Wolf
-    //в этом же классе присвойте полям Wolf какие-то значения
+    //Создайте класс com.startjava.lesson_2_3.animal.WolfTest с методом main
+    //в нем создайте объект типа com.startjava.lesson_2_3.animal.Wolf
+    //в этом же классе присвойте полям com.startjava.lesson_2_3.animal.Wolf какие-то значения
     //получите эти значения из полей и отобразите в консоли
     //вызовите методы объекта
     private String sex;
@@ -43,7 +45,7 @@ public class Wolf {
     }
 
     public double getAge() {
-        if(age == 0){
+        if (age == 0) {
             System.out.println("Возраст не может быть 0");
         }
         return age;

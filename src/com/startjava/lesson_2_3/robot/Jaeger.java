@@ -1,11 +1,26 @@
-public class Jaeger {
+package com.startjava.lesson_2_3.robot;
 
+public class Jaeger {
+//class variables
     private String modelName;
     private String mark;
     private String origin;
     private float height;
     private float weight;
 
+    //constructors
+    public Jaeger() {
+    }
+
+    public Jaeger(String modelName, String mark, String origin, float height, float weight) {
+        this.modelName = modelName;
+        this.mark = mark;
+        this.origin = origin;
+        this.height = height;
+        this.weight = weight;
+    }
+
+    //methods
     public String getModelName() {
         return modelName;
     }
@@ -65,7 +80,7 @@ public class Jaeger {
     }
 
     public String toString() {
-        return "Jaeger{" +
+        return "com.startjava.lesson_2_3.robot.Jaeger{" +
                 "modelName='" + modelName + '\'' +
                 ", mark='" + mark + '\'' +
                 ", origin='" + origin + '\'' +
@@ -74,8 +89,6 @@ public class Jaeger {
                 '}';
     }
 
-    public Jaeger() {
-    }
 
 
 }
