@@ -1,4 +1,4 @@
-package com.startjava.lesson_2_3.animal;
+package com.startjava.lesson_2_3_4.animal;
 
 public class Wolf {
     // TODO: 02.08.2023 Создайте класс com.startjava.lesson_2_3.animal.Wolf

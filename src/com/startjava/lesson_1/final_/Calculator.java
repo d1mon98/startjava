@@ -7,6 +7,8 @@ public class Calculator {
     private char mathOperation;
 
 
+
+
     public void setFirstnumber(int firstNumber) {
         this.firstNumber = firstNumber;
     }
