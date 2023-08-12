@@ -7,6 +7,16 @@ public class Book {
     private int year;
     private int length;
 
+    //constructors
+
+    public Book(String author, String title, int year) {
+        this.author = author;
+        this.title = title;
+        this.year = year;
+    }
+
+
+    //methods
 
 
 }

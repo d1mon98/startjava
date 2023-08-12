@@ -1,4 +1,4 @@
-package com.startjava.lesson_1.base;
+package com.startjava.lesson_1;
 
 public class CyclesTheme {
     public static void main(String[] args) {
@@ -113,7 +113,7 @@ public class CyclesTheme {
         System.out.println("В " + num5 + " (" + ss1 + ") колличество двоек - " + count2);
 
         //6. Отображение геометрических фигур
-        System.out.println("\n\n6. Отображение геометрических фигур\n");
+        System.out.println("\n\n6. Отображение геометрических фигур");
         for (int i3 = 0; i3 < 50; i3++) {
             if (i3 % 10 == 0) {
                 System.out.println();

@@ -1,4 +1,4 @@
-package com.startjava.lesson_2_3_4.bookShelf_notMine;
+package com.startjava.lesson_2_3_4.bookshelf_notMine;
 
 public class Book {
 
