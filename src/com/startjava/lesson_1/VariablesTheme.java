@@ -14,7 +14,6 @@ public class VariablesTheme {
         boolean used = false;
         char inStock = 'y';
 
-
         System.out.println("CPU quantity: " + cpuQuantity + " pcs.");
         System.out.println("CPU clock speed: " + cpuClockSpeed + " GHz");
         System.out.println("RAM modules: " + ramModules + " pcs.");
@@ -31,12 +30,11 @@ public class VariablesTheme {
         int bookPrice = 200;
         int totalPrice = penPrice + bookPrice;
         int discountPercent = 11;
-        int discountAmount = totalPrice * discountPercent / 100;
+        int discountPrice = totalPrice * discountPercent / 100;
 
         System.out.println("Общая стоимость товара без скидки = " + totalPrice);
-        System.out.println("Сумма скидки = " + discountAmount);
-        System.out.println("Общая стоимость товара со скидкой = " + (totalPrice
-                - totalPrice * discountPercent / 100));
+        System.out.println("Сумма скидки = " + discountPrice);
+        System.out.println("Общая стоимость товара со скидкой = " + (totalPrice - discountPrice));
 
         //3. Вывод слова JAVA
         System.out.println("\n\n3. Вывод слова JAVA\n");
@@ -75,11 +73,10 @@ public class VariablesTheme {
 
         int a = 2;
         int b = 5;
-        int tmp;
+        int tmp = a;
 
         System.out.println("Перестановка с помощью третьей переменной:" +
                 "\nдо перестановки: a = " + a + ", b = " + b);
-        tmp = a;
         a = b;
         b = tmp;
         System.out.println("после перестановки: a = " + a + ", b = " + b);
@@ -88,9 +85,9 @@ public class VariablesTheme {
                 "\nпосле перестановки: a = " + (a = a + b - (b = a)) + ", b = " + b);
         System.out.println("\nПерестановка с помощью побитовой операции ^:" +
                 "\nдо перестановки: a = " + a + ", b = " + b);
-        a = a ^ b;
-        b = b ^ a;
-        a = a ^ b;
+        a ^= b;
+        b ^= a;
+        a ^= b;
         System.out.println("после перестановки: a = " + a + ", b = " + b);
 
         //6. Вывод символов и их кодов
@@ -119,9 +116,11 @@ public class VariablesTheme {
 
         System.out.println("    " + slash + backslash);
         System.out.println("   " + slash + "  " + backslash);
-        System.out.println("  " + slash + underscore + leftParenthesis + " " + rightParenthesis + backslash);
+        System.out.println("  " + slash + underscore + leftParenthesis + " "
+                + rightParenthesis + backslash);
         System.out.println(" " + slash + "      " + backslash);
-        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash);
+        System.out.println("" + slash + underscore + underscore + underscore + underscore +
+                slash + backslash + underscore + underscore + backslash);
 
         //8. Вывод количества сотен, десятков и единиц числа
         System.out.println("\n\n8. Вывод количества сотен, десятков и единиц числа\n");
@@ -131,8 +130,8 @@ public class VariablesTheme {
         int tens = (num / 10) % 10;
         int ones = num % 10;
 
-        System.out.println("Число " + num + " содержит:\nсотен - " + hundreds + "\nдесятков - " + tens +
-                "\nединиц - " + ones);
+        System.out.println("Число " + num + " содержит:\nсотен - " + hundreds +
+                "\nдесятков - " + tens + "\nединиц - " + ones);
         System.out.println("Сумма его цифр = " + (hundreds + tens + ones));
         System.out.println("Произведение = " + (hundreds * tens * ones));
 
