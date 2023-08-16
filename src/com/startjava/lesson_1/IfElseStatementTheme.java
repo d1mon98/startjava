@@ -55,18 +55,20 @@ public class IfElseStatementTheme {
         int num3 = -10;
 
         if (num3 == 0) {
+            System.out.print("Введеное число = " + num3);
+        } else {
+            System.out.print("Число " + num3 + " является ");
+            if (num3 > 0) {
+                System.out.print("положительным и ");
+            } else {
+                System.out.print("отрицательным и ");
+            }
+            if (num3 % 2 == 0) {
+                System.out.print("четным");
+            } else {
+                System.out.print("нечетным");
+            }
         }
-        if (num3 > 0) {
-            System.out.print("Число " + num3 + " является положительным и ");
-        } else if (num3 < 0) {
-            System.out.print("Число " + num3 + " является отрицательным и ");
-        }
-        if (num3 % 2 == 0 & num3 != 0) {
-            System.out.println("четным");
-        } else if (num3 % 2 != 0 & num3 != 0) {
-            System.out.println("нечетным");
-        }
-
         //4. Поиск одинаковых цифр в числах
         System.out.println("\n\n4. Поиск одинаковых цифр в числах\n");
 
@@ -75,33 +77,24 @@ public class IfElseStatementTheme {
 
         if (getHundreds(num4) == getHundreds(num5) | getTens(num4) == getTens(num5)
                 | getOnes(num4) == getOnes(num5)) {
-            System.out.println("исходные числа: " + num4 + ", " + num5);
-            System.out.print("цифры, одинаковые в обоих числах: ");
-            if (getHundreds(num4) == getHundreds(num5)) {
-                System.out.print(getHundreds(num4) + "  ");
+            System.out.println("Исходные числа: " + num4 + ", " + num5);
+            System.out.print("разряды, с одинаковыми числами: \n");
+
+            if (getOnes(num4) == getOnes(num5)) {
+                System.out.println("разряд №1, одинковые цифраы: " + getOnes(num5));
             }
             if (getTens(num4) == getTens(num5)) {
-                System.out.print(getTens(num4) + "  ");
+                System.out.println("разряд №2, одинковые цифры: " + getTens(num5));
             }
-            if (getOnes(num4) == getOnes(num5)) {
-                System.out.print(getOnes(num4));
-            }
-            System.out.print("\nномера разрядов с одинаковыми цифрам: ");
             if (getHundreds(num4) == getHundreds(num5)) {
-                System.out.print(1 + "  ");
-            }
-            if (getTens(num4) == getTens(num5)) {
-                System.out.print(2 + "  ");
-            }
-            if (getOnes(num4) == getOnes(num5)) {
-                System.out.print(3);
+                System.out.println("разряд №3, одинковые цифры: " + getHundreds(num5));
             }
         } else {
             System.out.println("Цифры во всех разрядах разные");
         }
 
         //5. Определение символа по его коду
-        System.out.println("\n\n\n5. Определение символа по его коду\n");
+        System.out.println("\n\n5. Определение символа по его коду\n");
 
         char symbol = '\u005E';
 
@@ -118,19 +111,16 @@ public class IfElseStatementTheme {
         //6. Подсчет суммы вклада и начисленных банком %
         System.out.println("\n\n6. Подсчет суммы вклада и начисленных банком %\n");
 
-        double depositAmount = 300_000;
-        double interestRate;
-        double accrualAmount;
+        double depositAmount = 305_000;
+        double interestRate = 0.1;
 
         System.out.println("Cумма вклада = " + depositAmount);
         if (depositAmount < 100_000) {
             interestRate = 0.05;
         } else if (depositAmount >= 100_000 & depositAmount < 300_000) {
             interestRate = 0.07;
-        } else {
-            interestRate = 0.1;
         }
-        accrualAmount = interestRate * depositAmount;
+        double accrualAmount = interestRate * depositAmount;
         System.out.println("Процентная ставка = " + (int) (interestRate * 100) + "%");
         System.out.println("Cумма начисленного % = " + accrualAmount);
         System.out.println("Итоговая сумма с % = " + (depositAmount + accrualAmount));
@@ -138,11 +128,17 @@ public class IfElseStatementTheme {
         //7. Определение оценки по предметам
         System.out.println("\n\n7. Определение оценки по предметам\n");
 
-        System.out.println("История: " + grade(59));
-        System.out.println("Программирование: " + grade(92));
+        int historyPercent = 59;
+        int historyGrade = getGrade(historyPercent);
+        int programmingPercent = 92;
+        int programmingGrade = getGrade(programmingPercent);
+
+        System.out.println("История: " + historyGrade);
+        System.out.println("Программирование: " + programmingGrade);
         System.out.println("Средний балл по оценок по предметам: " +
-                (double) (grade(59) + grade(92)) / 2);
-        System.out.println("Средний % по предметам: " + (double) (59 + 92) / 2.0);
+                (double) (historyGrade + programmingGrade) / 2);
+        System.out.println("Средний % по предметам: " +
+                (double) (historyPercent + programmingPercent) / 2.0);
 
         //8. Расчет годовой прибыли
         System.out.println("\n\n8. Расчет годовой прибыли\n");
@@ -150,15 +146,12 @@ public class IfElseStatementTheme {
         int gross = 13_000;
         int rentCost = 5_000;
         int productionCost = 9_000;
-        int income = gross - (rentCost + productionCost);
-        int n10 = income / 1000;
+        int yearIncome = 12 * (gross - rentCost - productionCost);
 
-        if (income > 0) {
-            System.out.println("Прибыль за год: +" + n10 + " 000" + " руб");
-        } else if (income < 0) {
-            System.out.println("Прибыль за год: " + n10 + " 000" + " руб");
-        } else if (income == 0) {
-            System.out.println("Прибыль за год: " + income + " руб");
+        if (yearIncome > 0) {
+            System.out.print("Прибыль за год: +" + yearIncome + " руб");
+        } else {
+            System.out.println("Прибыль за год: " + yearIncome + " руб");
         }
     }
 
@@ -174,18 +167,16 @@ public class IfElseStatementTheme {
         return num % 10;
     }
 
-    public static int grade(int grade) {
-        int result;
-        if (grade <= 60) {
-            result = 2;
-        } else if (grade > 60 & grade < 73) {
-            result = 3;
-        } else if (grade >= 73 & grade < 91) {
-            result = 4;
-        } else {
-            result = 5;
+    public static int getGrade(int percent) {
+        int grade = 5;
+        if (percent <= 60) {
+            grade = 2;
+        } else if (percent > 60 & percent < 73) {
+            grade = 3;
+        } else if (percent >= 73 & percent < 91) {
+            grade = 4;
         }
-        return result;
+        return grade;
     }
 }
 
