@@ -55,7 +55,7 @@ public class IfElseStatementTheme {
         int num3 = -10;
 
         if (num3 == 0) {
-            System.out.print("Введеное число = " + num3);
+            System.out.print("Введенное число = " + num3);
         } else {
             System.out.print("Число " + num3 + " является ");
             if (num3 > 0) {
@@ -69,6 +69,7 @@ public class IfElseStatementTheme {
                 System.out.print("нечетным");
             }
         }
+        
         //4. Поиск одинаковых цифр в числах
         System.out.println("\n\n4. Поиск одинаковых цифр в числах\n");
 
@@ -81,7 +82,7 @@ public class IfElseStatementTheme {
             System.out.print("разряды, с одинаковыми числами: \n");
 
             if (getOnes(num4) == getOnes(num5)) {
-                System.out.println("разряд №1, одинковые цифраы: " + getOnes(num5));
+                System.out.println("разряд №1, одинковые цифры: " + getOnes(num5));
             }
             if (getTens(num4) == getTens(num5)) {
                 System.out.println("разряд №2, одинковые цифры: " + getTens(num5));

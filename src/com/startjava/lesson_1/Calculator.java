@@ -2,9 +2,7 @@ package com.startjava.lesson_1;
 
 public class Calculator {
 
-
     public static void main(String[] args) {
-
         int num1 = 2;
         int num2 = 10;
         char sign = '^';
@@ -24,7 +22,7 @@ public class Calculator {
             result = num1 % num2;
         } else if (sign == '^') {
             for (int i = 0; i < num2; i++) {
-                result = result * num1;
+                result *= num1;
             }
         }
         System.out.println(num1 + " " + sign + " " + num2 + " = " + result);

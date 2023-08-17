@@ -64,11 +64,11 @@ public class CyclesTheme {
         //4.Вывод чисел в несколько строк
         System.out.println("\n\n4. Вывод чисел в несколько строк\n");
 
-        int endRagne = 30;
+        int endRange = 30;
         counter = 0;
         int countRows = 0;
 
-        for (int i = 1; i < endRagne; i = i + 2) {
+        for (int i = 1; i < endRange; i += 2) {
             counter++;
             System.out.printf("%5d", i);
             if (counter % 5 == 0) {
@@ -89,7 +89,6 @@ public class CyclesTheme {
         int num5 = 3242592;
         int copyNum5 = num5;
         int countTwos = 0;
-        String text;
 
         while (num5 > 0) {
             if (num5 % 10 == 2) {
@@ -97,6 +96,9 @@ public class CyclesTheme {
             }
             num5 /= 10;
         }
+
+        String text;
+
         if (countTwos % 2 == 0 | countTwos == 1) {
             text = "четное";
         } else {
@@ -152,12 +154,12 @@ public class CyclesTheme {
         System.out.printf("%-10s%s%n", "DECIMAL", "CHARACTER");
         for (int i = '\0'; i <= '/'; i++) {
             if (i % 2 != 0) {
-                System.out.printf("%4d%11s%n", (i), (char) i);
+                System.out.printf("%4d%11c%n", (i), i);
             }
         }
         for (int i = 'a'; i <= 'z'; i++) {
             if (i % 2 == 0) {
-                System.out.printf("%4d%11s%n", (i), (char) i);
+                System.out.printf("%4d%11c%n", (i), i);
             }
         }
 
@@ -166,10 +168,10 @@ public class CyclesTheme {
 
         int num6 = 1234321;
         int copyNum6 = num6;
-        int lastDigit;
         int palindrome = 0;
 
         while (copyNum6 > 0) {
+            int lastDigit;
             lastDigit = copyNum6 % 10;
             palindrome = palindrome * 10 + lastDigit;
             copyNum6 /= 10;
@@ -209,9 +211,7 @@ public class CyclesTheme {
         System.out.println("\n\n10. Отображение таблицы умножения Пифагора\n");
         System.out.printf("%11s%13s%n", "ТАБЛИЦА", "ПИФАГОРА");
         System.out.print("   |");
-        for (
-                int i = 2;
-                i < 10; i++) {
+        for (int i = 2; i < 10; i++) {
             System.out.printf("%2d ", i);
         }
         System.out.print("\n---|-----------------------\n");
@@ -220,7 +220,7 @@ public class CyclesTheme {
             for (int j = 2; j < 10; j++) {
                 System.out.printf("%2d ", i * j);
             }
-            System.out.print("\n");
+            System.out.println();
         }
     }
 }
