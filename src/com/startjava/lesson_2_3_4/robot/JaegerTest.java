@@ -13,9 +13,7 @@ public class JaegerTest {
         System.out.println(strikerEureka);
         System.out.println(crimsonTyphoon.scanKaiju());
         strikerEureka.useWeapon();
-        crimsonTyphoon.isMoving();
-        strikerEureka.isDrifting();
-
-
+        crimsonTyphoon.isMove();
+        strikerEureka.isDrift();
     }
 }

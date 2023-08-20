@@ -9,13 +9,11 @@ public class WolfTest {
         wolf.setNickname("Akela");
         wolf.setWeight(38);
 
-        System.out.println();
-        System.out.println("sex: " + wolf.getSex());
+        System.out.println("\nsex: " + wolf.getSex());
         System.out.println("age: " + wolf.getAge());
         System.out.println("color: " + wolf.getColor());
         System.out.println("nickname: " + wolf.getNickname());
-        System.out.println("weight: " + wolf.getWeight());
-        System.out.println();
+        System.out.println("weight: " + wolf.getWeight() + "\n");
 
         wolf.go();
         wolf.hunt();

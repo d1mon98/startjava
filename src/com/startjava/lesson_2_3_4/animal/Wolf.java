@@ -15,6 +15,22 @@ public class Wolf {
         this.sex = sex;
     }
 
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     public double getAge() {
         if (age == 0) {
             System.out.println("Age cannot be 0");
@@ -36,22 +52,6 @@ public class Wolf {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
     }
 
     public void go() {

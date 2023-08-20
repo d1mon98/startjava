@@ -61,12 +61,12 @@ public class Jaeger {
         this.weight = weight;
     }
 
-    public boolean isDrifting() {
+    public boolean isDrift() {
         System.out.println("Вы вошли в дрифт");
         return true;
     }
 
-    public boolean isMoving() {
+    public boolean isMove() {
         System.out.println("Вы прошли 5 шагов");
         return true;
     }
