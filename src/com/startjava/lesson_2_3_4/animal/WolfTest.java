@@ -2,28 +2,24 @@ package com.startjava.lesson_2_3_4.animal;
 
 public class WolfTest {
     public static void main(String[] args) {
-
-        Wolf w = new Wolf();
-        w.setSex("male");
-        w.setAge(14);
-        w.setColor("gray");
-        w.setNickname("Akela");
-        w.setWeight(38);
+        Wolf wolf = new Wolf();
+        wolf.setSex("male");
+        wolf.setAge(7);
+        wolf.setColor("gray");
+        wolf.setNickname("Akela");
+        wolf.setWeight(38);
 
         System.out.println();
-        System.out.println("sex " + w.getSex());
-        System.out.println("age " + w.getAge());
-        System.out.println("color " + w.getColor());
-        System.out.println("nickname " + w.getNickname());
-        System.out.println("weight " + w.getWeight());
+        System.out.println("sex: " + wolf.getSex());
+        System.out.println("age: " + wolf.getAge());
+        System.out.println("color: " + wolf.getColor());
+        System.out.println("nickname: " + wolf.getNickname());
+        System.out.println("weight: " + wolf.getWeight());
         System.out.println();
 
-        w.go();
-        w.hunt();
-        w.run();
-        w.sit();
-
-
+        wolf.go();
+        wolf.hunt();
+        wolf.run();
+        wolf.sit();
     }
-
 }

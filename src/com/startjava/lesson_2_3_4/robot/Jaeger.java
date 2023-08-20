@@ -1,7 +1,7 @@
 package com.startjava.lesson_2_3_4.robot;
 
 public class Jaeger {
-//class variables
+    //class variables
     private String modelName;
     private String mark;
     private String origin;
@@ -61,12 +61,12 @@ public class Jaeger {
         this.weight = weight;
     }
 
-    public boolean drift() {
+    public boolean isDrifting() {
         System.out.println("Вы вошли в дрифт");
         return true;
     }
 
-    public boolean move() {
+    public boolean isMoving() {
         System.out.println("Вы прошли 5 шагов");
         return true;
     }
@@ -80,15 +80,12 @@ public class Jaeger {
     }
 
     public String toString() {
-        return "com.startjava.lesson_2_3.robot.Jaeger{" +
+        return "com.startjava.lesson_2_3.robot.Jaeger {" +
                 "modelName='" + modelName + '\'' +
                 ", mark='" + mark + '\'' +
-                ", origin='" + origin + '\'' +
+                ", origin '" + origin + '\'' +
                 ", height=" + height +
                 ", weight=" + weight +
                 '}';
     }
-
-
-
 }

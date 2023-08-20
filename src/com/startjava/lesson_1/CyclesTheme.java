@@ -2,8 +2,8 @@ package com.startjava.lesson_1;
 
 public class CyclesTheme {
     public static void main(String[] args) {
-        //1.Подсчет суммы четных и нечетных чисел
-        System.out.println("1. Подсчет суммы четных и нечетных чисел\n");
+        //1.Подсчёт суммы чётных и нечётных чисел
+        System.out.println("1. Подсчёт суммы чётных и нечётных чисел\n");
 
         int sumEven = 0;
         int sumOdd = 0;
@@ -17,7 +17,7 @@ public class CyclesTheme {
             }
             counter++;
         } while (counter <= 21);
-        System.out.println("В отрезке [-10, 21] сумма четных чисел = " + sumEven + ", а нечетных = " + sumOdd);
+        System.out.println("В отрезке [-10, 21] сумма чётных чисел = " + sumEven + ", а нечётных = " + sumOdd);
 
         //2. Вывод чисел в порядке убывания
         System.out.println("\n\n2. Вывод чисел в порядке убывания\n");
@@ -84,7 +84,7 @@ public class CyclesTheme {
         }
 
         //5. Проверка количества двоек числа на четность/нечетность
-        System.out.println("\n\n5. Проверка колличества двоек числа на четность / нечетность\n");
+        System.out.println("\n\n5. Проверка количества двоек числа на четность / нечетность\n");
 
         int num5 = 3242592;
         int copyNum5 = num5;
@@ -100,7 +100,7 @@ public class CyclesTheme {
         String text;
 
         if (countTwos % 2 == 0 | countTwos == 1) {
-            text = "четное";
+            text = "чётное";
         } else {
             text = "нечетное";
         }
@@ -154,12 +154,12 @@ public class CyclesTheme {
         System.out.printf("%-10s%s%n", "DECIMAL", "CHARACTER");
         for (int i = '\0'; i <= '/'; i++) {
             if (i % 2 != 0) {
-                System.out.printf("%4d%11c%n", (i), i);
+                System.out.printf("%4d%11c%n", i, i);
             }
         }
         for (int i = 'a'; i <= 'z'; i++) {
             if (i % 2 == 0) {
-                System.out.printf("%4d%11c%n", (i), i);
+                System.out.printf("%4d%11c%n", i, i);
             }
         }
 
@@ -171,8 +171,7 @@ public class CyclesTheme {
         int palindrome = 0;
 
         while (copyNum6 > 0) {
-            int lastDigit;
-            lastDigit = copyNum6 % 10;
+            int lastDigit = copyNum6 % 10;
             palindrome = palindrome * 10 + lastDigit;
             copyNum6 /= 10;
         }

@@ -14,7 +14,7 @@ public class GuessNumber {
                 System.out.println("Число " + playerNum + " меньше того, что загадал компьютер");
                 playerNum += 2;
             } else {
-                System.out.println("ЧислоВы победили!");
+                System.out.println("Вы победили!");
                 break;
             }
         }

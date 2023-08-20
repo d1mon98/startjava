@@ -55,7 +55,7 @@ public class IfElseStatementTheme {
         int num3 = -10;
 
         if (num3 == 0) {
-            System.out.print("Введенное число = " + num3);
+            System.out.print("Введённое число = " + num3);
         } else {
             System.out.print("Число " + num3 + " является ");
             if (num3 > 0) {
@@ -64,12 +64,12 @@ public class IfElseStatementTheme {
                 System.out.print("отрицательным и ");
             }
             if (num3 % 2 == 0) {
-                System.out.print("четным");
+                System.out.print("чётным");
             } else {
-                System.out.print("нечетным");
+                System.out.print("нечётным");
             }
         }
-        
+
         //4. Поиск одинаковых цифр в числах
         System.out.println("\n\n4. Поиск одинаковых цифр в числах\n");
 
@@ -82,13 +82,13 @@ public class IfElseStatementTheme {
             System.out.print("разряды, с одинаковыми числами: \n");
 
             if (getOnes(num4) == getOnes(num5)) {
-                System.out.println("разряд №1, одинковые цифры: " + getOnes(num5));
+                System.out.println("разряд №1, одинаковые цифры: " + getOnes(num5));
             }
             if (getTens(num4) == getTens(num5)) {
-                System.out.println("разряд №2, одинковые цифры: " + getTens(num5));
+                System.out.println("разряд №2, одинаковые цифры: " + getTens(num5));
             }
             if (getHundreds(num4) == getHundreds(num5)) {
-                System.out.println("разряд №3, одинковые цифры: " + getHundreds(num5));
+                System.out.println("разряд №3, одинаковые цифры: " + getHundreds(num5));
             }
         } else {
             System.out.println("Цифры во всех разрядах разные");
@@ -109,8 +109,8 @@ public class IfElseStatementTheme {
             System.out.println("Символ " + symbol + " не является ни буквой и ни цифрой");
         }
 
-        //6. Подсчет суммы вклада и начисленных банком %
-        System.out.println("\n\n6. Подсчет суммы вклада и начисленных банком %\n");
+        //6. Подсчёт суммы вклада и начисленных банком %
+        System.out.println("\n\n6. Подсчёт суммы вклада и начисленных банком %\n");
 
         double depositAmount = 305_000;
         double interestRate = 0.1;
