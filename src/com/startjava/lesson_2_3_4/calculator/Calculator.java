@@ -28,7 +28,7 @@ public class Calculator {
     }
 
     //  +, -, *, /, ^, %
-    public double calculate(String[] array) {
+    public double calculate() {
         double result = 0;
         switch (mathSymbol) {
             case '+' -> result = (num1 + num2);

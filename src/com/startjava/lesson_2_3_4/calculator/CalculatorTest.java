@@ -16,7 +16,7 @@ public class CalculatorTest {
             calc.setNum1(Integer.parseInt(expressionArray[0]));
             calc.setMathSymbol(expressionArray[1].charAt(0));
             calc.setNum2(Integer.parseInt(expressionArray[2]));
-            printCalc(calc.calculate(expressionArray), expressionArray);
+            printCalc(calc.calculate(), expressionArray);
             System.out.println();
             for (int i = 0; i < 1000; i++) {
                 System.out.print("Хотите продолжить вычисления? [yes/no]: ");
