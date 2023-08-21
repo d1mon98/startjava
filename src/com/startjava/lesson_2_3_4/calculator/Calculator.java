@@ -2,55 +2,42 @@ package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
 
-    private double firstNumber;
-    private double secondNumber;
-    private char mathOperation;
+    private double num1;
+    private double num2;
+    private char mathSymbol;
 
-    public String[] setExpression(String expression) {
+    public void setNum1(double num1) {
+        this.num1 = num1;
+    }
 
+    public void setNum2(double num2) {
+        this.num2 = num2;
+    }
+
+    public void setMathSymbol(char mathSymbol) {
+        this.mathSymbol = mathSymbol;
+    }
+
+    public String[] splitExpression(String expression) {
         return expression.split(" ");
     }
 
-    public void setFirstNumber(double firstNumber) {
-        this.firstNumber = firstNumber;
-    }
-
-    public void setSecondNumber(double secondNumber) {
-        this.secondNumber = secondNumber;
-    }
-
-    public void setMathOperation(char mathOperation) {
-        this.mathOperation = mathOperation;
-    }
-
     public static void printCalc(double result, String[] array) {
-        if (((int) result == result) & result != 0) {
-            System.out.print(array[0] + " " + array[1] + " " + array[2] + " = ");
-            System.out.printf("%.0f", result);
-
-        }
-        if ((int) result != result) {
-            System.out.print(array[0] + " " + array[1] + " " + array[2] + " = ");
-            System.out.printf("%.3f", result);
-
-        }
-        if (result == 0) {
-            System.out.print("");
-
-        }
+        System.out.print(array[0] + " " + array[1] + " " + array[2] + " = ");
+        System.out.printf(result % 1 == 0 ? "%.0f" : "%.3f", result);
     }
 
     //  +, -, *, /, ^, %
     public double calculate(String[] array) {
         double result = 0;
-        switch (mathOperation) {
-            case '+' -> result = (firstNumber + secondNumber);
-            case '-' -> result = (firstNumber - secondNumber);
-            case '*' -> result = (firstNumber * secondNumber);
-            case '/' -> result = (firstNumber / secondNumber);
-            case '%' -> result = (firstNumber % secondNumber);
-            case '^' -> result = (Math.pow(firstNumber, secondNumber));
-            default -> System.out.println("Ошибка: знак " + array[1].charAt(0) + " не поддерживается");
+        switch (mathSymbol) {
+            case '+' -> result = (num1 + num2);
+            case '-' -> result = (num1 - num2);
+            case '*' -> result = (num1 * num2);
+            case '/' -> result = (num1 / num2);
+            case '%' -> result = (num1 % num2);
+            case '^' -> result = (Math.pow(num1, num2));
+            default -> System.out.println("Ошибка: знак " + mathSymbol + " не поддерживается");
         }
         return result;
     }

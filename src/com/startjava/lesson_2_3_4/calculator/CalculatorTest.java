@@ -6,22 +6,18 @@ import static com.startjava.lesson_2_3_4.calculator.Calculator.*;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-
         String answer = "yes";
         do {
             Scanner scanner = new Scanner(System.in);
-            Calculator calc = new Calculator();
             System.out.print("Введите математическое выражение: ");
             String expression = scanner.nextLine();
-            String[] expression1 = calc.setExpression(expression);
-
-            calc.setFirstNumber(Integer.parseInt(expression1[0]));
-            calc.setMathOperation(expression1[1].charAt(0));
-            calc.setSecondNumber(Integer.parseInt(expression1[2]));
-
-            printCalc(calc.calculate(expression1), expression1);
+            Calculator calc = new Calculator();
+            String[] expressionArray = calc.splitExpression(expression);
+            calc.setNum1(Integer.parseInt(expressionArray[0]));
+            calc.setMathSymbol(expressionArray[1].charAt(0));
+            calc.setNum2(Integer.parseInt(expressionArray[2]));
+            printCalc(calc.calculate(expressionArray), expressionArray);
             System.out.println();
-
             for (int i = 0; i < 1000; i++) {
                 System.out.print("Хотите продолжить вычисления? [yes/no]: ");
                 answer = scanner.next();
@@ -29,9 +25,7 @@ public class CalculatorTest {
                     break;
                 }
             }
-
         }
         while (answer.equals("yes"));
-
     }
 }
